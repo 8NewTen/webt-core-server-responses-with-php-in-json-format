@@ -7,17 +7,14 @@ class Song {
     public $trackNumber;
     public $duration;
 
-    /**
-     * Getter-Methode für die ID.
-     */
+     //Getter-Methode für die ID.
     public function getId()
     {
         return $this->id;
     }
 
-    /**
-     * Setter-Methode für die ID.
-     */
+
+     //Setter-Methode für die ID.
     public function setId($id): void
     {
         $this->id = $id;
@@ -25,9 +22,9 @@ class Song {
 
     // Ähnliche Getter- und Setter-Methoden für die anderen Eigenschaften...
 
-    /**
-     * Konstruktor-Methode, die beim Erstellen eines neuen Song-Objekts aufgerufen wird.
-     */
+
+     //Konstruktor-Methode, die beim Erstellen eines neuen Song-Objekts aufgerufen wird.
+
     public function __construct($id, $name, $artist, $trackNumber, $duration)
     {
         // Initialisierung der Eigenschaften mit den übergebenen Werten.
