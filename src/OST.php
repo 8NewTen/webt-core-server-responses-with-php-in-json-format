@@ -20,12 +20,3 @@ class OST {
     }
 }
 
-// Definition der Song-Klasse
-class Song {
-    // Öffentliche Eigenschaften der Song-Klasse
-    public $id;
-    public $name;
-    public $artist;
-    public $trackNumber;
-    public $duration;
-}
