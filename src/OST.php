@@ -1,7 +1,7 @@
 <?php
 
 // Definition der OST-Klasse
-class OST {
+class OST implements JsonSerializable{
     // Öffentliche Eigenschaften der OST-Klasse
     public $id;
     public $name;
@@ -17,6 +17,19 @@ class OST {
         $this->videoGameName = $videoGameName;
         $this->releaseYear = $releaseYear;
         $this->trackList = $trackList;
+    }
+
+//: mixed weil es verschiedene Datentypen sind
+    public function jsonSerialize(): mixed
+    {
+        // TODO: Implement jsonSerialize() method.
+        return[
+            'id'=>$this->id,
+            'name' => $this->name,
+            'videoGameName' => $this->videoGameName,
+            'releaseYear' => $this->releaseYear,
+            'trackList' => $this->trackList
+        ];
     }
 }
 

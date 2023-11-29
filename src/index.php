@@ -10,6 +10,7 @@ require_once 'Song.php';
 // Inkludieren der Seeder-Klasse -> (generiert Daten für Demonstrationszwecke)
 $osts = Seeder::seedData();
 
+//http://localhost/ComposerDemo/webt-core-server-responses-with-php-in-json-format/src/index.php/?ost_id=1
 // Überprüfen, ob ein GET-Parameter 'ost_id' vorhanden ist
 $requestedOSTId = isset($_GET['ost_id']) ? $_GET['ost_id'] : null;
 

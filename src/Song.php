@@ -1,5 +1,5 @@
 <?php
-class Song {
+class Song implements JsonSerializable{
     // Eigenschaften (Properties) der Klasse
     public $id;
     public $name;
@@ -40,5 +40,17 @@ class Song {
         $this->artist = $artist;
         $this->trackNumber = $trackNumber;
         $this->duration = $duration;
+    }
+
+    public function jsonSerialize(): mixed
+    {
+        // TODO: Implement jsonSerialize() method.
+        return[
+            'id' => $this->id,
+            'name' => $this->name,
+            'artist' => $this->artist,
+            'trackNumber' => $this->trackNumber,
+            'duration' => $this->duration
+        ];
     }
 }
