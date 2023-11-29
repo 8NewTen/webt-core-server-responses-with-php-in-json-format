@@ -5,6 +5,7 @@
 // Inkludieren der OST-Klasse -> (Struktur für die OST-Objekte)
 require_once 'OST.php';
 require_once 'Seeder.php';
+require_once 'Song.php';
 
 // Inkludieren der Seeder-Klasse -> (generiert Daten für Demonstrationszwecke)
 $osts = Seeder::seedData();

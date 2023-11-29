@@ -37,15 +37,8 @@ class Seeder {
 
     // Private statische Methode zur Erstellung eines Song-Objekts
     private static function createSong($id, $name, $artist, $trackNumber, $duration) {
-        // Erstellung eines neuen Song-Objekts
-        $song = new Song();
-
-        // Setzen der Eigenschaften des Song-Objekts
-        $song->id = $id;
-        $song->name = $name;
-        $song->artist = $artist;
-        $song->trackNumber = $trackNumber;
-        $song->duration = $duration;
+        // Erstellung eines neuen Song-Objekts mit den erforderlichen Argumenten
+        $song = new Song($id, $name, $artist, $trackNumber, $duration);
 
         // Rückgabe des erstellten Song-Objekts
         return $song;
