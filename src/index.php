@@ -22,7 +22,7 @@ if ($requestedOSTId !== null) {
 
     // Durchsuchen der generierten OSTs nach der angeforderten OST anhand der ID
     foreach ($osts as $ost) {
-        if ($ost->id == $requestedOSTId) {
+        if ($ost->getId() == $requestedOSTId) {
             $requestedOST = $ost;
             break;
         }

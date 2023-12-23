@@ -1,11 +1,11 @@
 <?php
 class Song implements JsonSerializable{
     // Eigenschaften (Properties) der Klasse
-    public $id;
-    public $name;
-    public $artist;
-    public $trackNumber;
-    public $duration;
+    private $id;
+    private $name;
+    private $artist;
+    private $trackNumber;
+    private $duration;
 
      //Getter-Methode für die ID.
 
@@ -17,17 +17,7 @@ class Song implements JsonSerializable{
      * @param $duration
      */
 
-    public function getId()
-    {
-        return $this->id;
-    }
 
-
-     //Setter-Methode für die ID.
-    public function setId($id): void
-    {
-        $this->id = $id;
-    }
 
     // Ähnliche Getter- und Setter-Methoden für die anderen Eigenschaften...
 

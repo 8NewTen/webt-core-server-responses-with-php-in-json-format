@@ -3,11 +3,11 @@
 // Definition der OST-Klasse
 class OST implements JsonSerializable{
     // Öffentliche Eigenschaften der OST-Klasse
-    public $id;
-    public $name;
-    public $videoGameName;
-    public $releaseYear;
-    public $trackList = array(); // Ein leeres Array für die Liste der Tracks
+    private $id;
+    private $name;
+    private $videoGameName;
+    private $releaseYear;
+    private $trackList = array(); // Ein leeres Array für die Liste der Tracks
 
     // Konstruktor der OST-Klasse
     public function __construct($id = null, $name = null, $videoGameName = null, $releaseYear = null, $trackList = array()) {
@@ -30,6 +30,14 @@ class OST implements JsonSerializable{
             'releaseYear' => $this->releaseYear,
             'trackList' => $this->trackList
         ];
+    }
+
+    /**
+     * @return mixed|null
+     */
+    public function getId()
+    {
+        return $this->id;
     }
 }
 
