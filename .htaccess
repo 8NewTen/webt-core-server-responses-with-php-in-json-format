@@ -2,4 +2,4 @@ RewriteEngine On
 RewriteBase /ComposerDemo/webt-core-server-responses-with-php-in-json-format
 
 
-RewriteRule ^/src/0-9A-Za-z&$^ index.php?ost_id=$1 [QSA,L]
+RewriteRule ^/src/ost/([0-9]+) index.php?ost_id=$1 [QSA,L]
