@@ -1,5 +1,4 @@
 RewriteEngine On
-RewriteBase /ComposerDemo/webt-core-server-responses-with-php-in-json-format
 
-
-RewriteRule ^/src/ost/([0-9]+) index.php?ost_id=$1 [QSA,L]
+RewriteRule  ^ost/([0-9]+)$ http://localhost/ComposerDemo/webt-core-server-responses-with-php-in-json-format/?ost_id=$1 [L]
+RewriteRule  ^ost/ http://localhost/ComposerDemo/webt-core-server-responses-with-php-in-json-format/
