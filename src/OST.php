@@ -1,7 +1,8 @@
 <?php
 
 // Definition der OST-Klasse
-class OST implements JsonSerializable{
+class OST implements JsonSerializable
+{
     // Öffentliche Eigenschaften der OST-Klasse
     private $id;
     private $name;
@@ -10,7 +11,8 @@ class OST implements JsonSerializable{
     private $trackList = array(); // Ein leeres Array für die Liste der Tracks
 
     // Konstruktor der OST-Klasse
-    public function __construct($id = null, $name = null, $videoGameName = null, $releaseYear = null, $trackList = array()) {
+    public function __construct($id = null, $name = null, $videoGameName = null, $releaseYear = null, $trackList = array())
+    {
         // Initialisierung der Eigenschaften mit den übergebenen Werten oder Standardwerten (falls nicht übergeben)
         $this->id = $id;
         $this->name = $name;
@@ -19,12 +21,12 @@ class OST implements JsonSerializable{
         $this->trackList = $trackList;
     }
 
-//: mixed weil es verschiedene Datentypen sind
+    //: mixed weil es verschiedene Datentypen sind
     public function jsonSerialize(): mixed
     {
         // TODO: Implement jsonSerialize() method.
-        return[
-            'id'=>$this->id,
+        return [
+            'id' => $this->id,
             'name' => $this->name,
             'videoGameName' => $this->videoGameName,
             'releaseYear' => $this->releaseYear,
@@ -38,6 +40,11 @@ class OST implements JsonSerializable{
     public function getId()
     {
         return $this->id;
+    }
+
+    public function getName()
+    {
+        return $this->name;
     }
 }
 

@@ -1,0 +1,27 @@
+
+sudo apt-get update
+sudo apt-get install apache2 ?
+
+
+I know
+
+    what mod_rewrite is:
+
+    es ist ein Modul oder Plugin für Apache-Server-> damit ist es möglich, URLs einer Website umzuschreiben bzw. umzuleiten
+    (apache modul um urls zu manipulieren)
+
+I can
+
+    set up a scenario for passing at least two GET parameters through a human readable URL
+    -> .htaccess die rules
+
+I know that human-readable URLs are user- and SEO-friendly URLs (also called "slugs").
+-> It typically uses meaningful words to help users identify the content of a webpage
+
+I know that I can define rules that convert slugs into path segments, GET parameters, etc.
+
+
+User Story 2: Offering Speaking URLs -> .htaccess
+
+
+http://localhost/ComposerDemo/webt-core-server-responses-with-php-in-json-format/ostName/OST-1

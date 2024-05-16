@@ -14,12 +14,12 @@ class Seeder {
             // Schleife für die Erstellung von vier Song-Objekten pro OST
             for ($j = 1; $j <= 4; $j++) {
                 // Aufruf der privaten Methode createSong, um ein Song-Objekt zu erstellen
-                $song = self::createSong($j, "Song $j", "Artist $j", $j, "3:45");
+                $song = self::createSong($j, "Song-$j", "Artist $j", $j, "3:45");
 
                 // Hinzufügen des Song-Objekts zur trackList des OST-Objekts
                 $trackList[] = $song;
             }
-            $ost = new OST($i, "OST $i", "Game $i", 2000 + $i, $trackList);
+            $ost = new OST($i, "OST-$i", "Game $i", 2000 + $i, $trackList);
             // Hinzufügen des OST-Objekts zum Array von OSTs
             $osts[] = $ost;
         }

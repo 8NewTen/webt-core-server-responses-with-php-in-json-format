@@ -12,7 +12,25 @@ $osts = Seeder::seedData();
 
 //http://localhost/ComposerDemo/webt-core-server-responses-with-php-in-json-format/src/index.php/?ost_id=1
 // Überprüfen, ob ein GET-Parameter 'ost_id' vorhanden ist
+
+
+if(isset($_GET['ostName'])){
+    foreach ($osts as $ost) {
+        if ($ost->getName() == $_GET['ostName']) {
+            header('Content-Type: application/json');
+            // Ausgabe der angeforderten OST als JSON
+            echo json_encode($ost);
+            return;
+        }
+    }
+    return;
+}
+
+
+
 $requestedOSTId = isset($_GET['ost_id']) ? $_GET['ost_id'] : null;
+
+
 
 // Wenn eine bestimmte OST angefordert wurde (durch 'ost_id' im GET-Parameter)
 if ($requestedOSTId !== null) {
@@ -44,4 +62,5 @@ if ($requestedOSTId !== null) {
     header('Content-Type: application/json');
     // Ausgabe aller OSTs als JSON
     echo json_encode($osts);
+    return;
 }

@@ -1,4 +1,18 @@
+# aktiviert das URL-Rewriting-Modul, -> erst dann gelten die regeln dannach
 RewriteEngine On
 
+# jede URL, die dem Muster ost/[id] entspricht wird auf eine neue url umgeleitet
+#[0-9]+ -> eine oder mehrere Ziffern
+#$1 ist ein Platzhalter für die zahl
+#[L] > wenn diese Regel zutrifft ist das die letzte Regel ist, die angewendet wird.
 RewriteRule  ^ost/([0-9]+)$ http://localhost/ComposerDemo/webt-core-server-responses-with-php-in-json-format/?ost_id=$1 [L]
-RewriteRule  ^ost/ http://localhost/ComposerDemo/webt-core-server-responses-with-php-in-json-format/
+#bsp http://localhost/ComposerDemo/webt-core-server-responses-with-php-in-json-format/ost/1
+
+RewriteRule  ^ostName/([0-9a-zA-Z-]+)$ http://localhost/ComposerDemo/webt-core-server-responses-with-php-in-json-format/?ostName=$1 [L]
+#bsp http://localhost/ComposerDemo/webt-core-server-responses-with-php-in-json-format/ostName/OST-1
+
+
+
+# jede URL, die mit ost/ beginnt (aber nicht einer bestimmten Nummer endet), wird auf eine festgelegte URL umgeleitet
+RewriteRule  ^ost$ http://localhost/ComposerDemo/webt-core-server-responses-with-php-in-json-format/ [L]
+#http://localhost/ComposerDemo/webt-core-server-responses-with-php-in-json-format/ost
