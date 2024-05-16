@@ -5,6 +5,7 @@ RewriteEngine On
 #[0-9]+ -> eine oder mehrere Ziffern
 #$1 ist ein Platzhalter für die zahl
 #[L] > wenn diese Regel zutrifft ist das die letzte Regel ist, die angewendet wird.
+
 RewriteRule  ^ost/([0-9]+)$ http://localhost/ComposerDemo/webt-core-server-responses-with-php-in-json-format/?ost_id=$1 [L]
 #bsp http://localhost/ComposerDemo/webt-core-server-responses-with-php-in-json-format/ost/1
 
