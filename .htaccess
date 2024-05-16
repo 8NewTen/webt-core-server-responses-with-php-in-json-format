@@ -13,7 +13,6 @@ RewriteRule  ^ostName/([0-9a-zA-Z-]+)$ http://localhost/ComposerDemo/webt-core-s
 #bsp http://localhost/ComposerDemo/webt-core-server-responses-with-php-in-json-format/ostName/OST-1
 
 
-
 # jede URL, die mit ost/ beginnt (aber nicht einer bestimmten Nummer endet), wird auf eine festgelegte URL umgeleitet
 RewriteRule  ^ost$ http://localhost/ComposerDemo/webt-core-server-responses-with-php-in-json-format/ [L]
 #http://localhost/ComposerDemo/webt-core-server-responses-with-php-in-json-format/ost
